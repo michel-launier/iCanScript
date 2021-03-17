@@ -7,6 +7,6 @@
 
 import Foundation
 
-typealias FullyQualifiedType = String
-typealias FullyQualifiedName = String
-
+typealias FullyQualifiedType  = String
+typealias FullyQualifiedName  = String
+typealias FullyQualifiedValue = String

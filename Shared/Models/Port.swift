@@ -16,31 +16,35 @@ enum PortType: Int, Codable {
     case Parameter
 }
 
-class Port {
-    var label:      String               // User visible label
-    let name:       String               // Function parameter name
-    let direction:  PortDirection        // Input/Output port specification
+class Port: Codable {
+    var label:         String?              // User visible label
+    let name:          String               // Function parameter name
+    let direction:     PortDirection        // Input/Output port specification
+    var portType:      PortType             // Type of port
+    let qualifiedType: FullyQualifiedType   // The programatic type of the port
+    let defaultValue:  FullyQualifiedValue? // Default value for port
+    var value:         FullyQualifiedValue? // Constant value for port
+    var sourcingPort:  Port?                // Port that supplies the value
+    let parameterIndex: Int?
     
     init(parameterName: String,
-         direction: PortDirection,
-         label: String? = nil) {
-        self.label         = label ?? parameterName
+         direction:     PortDirection,
+         portType:      PortType,
+         qualifiedType: FullyQualifiedType,
+         defaultValue:  FullyQualifiedValue?) {
         self.name          = parameterName
         self.direction     = direction
-    }
-}
-
-class FunctionPort: Port {
-    let qualifiedType: FullyQualifiedType   // The programatic type of the port
-    var defaultValue: String?               // Default value for port
-    
-    init(parameterName: String,
-         direction: PortDirection,
-         qualifiedType: FullyQualifiedType,
-         label: String? = nil,
-         defaultValue: String?) {
+        self.portType      = portType
         self.qualifiedType = qualifiedType
         self.defaultValue  = defaultValue
-        super.init(parameterName: parameterName, direction: direction, label: label)
     }
+
+    // Brings back the port to it initial state
+    func reset() {
+        self.label = nil
+        self.value = nil
+        self.sourcingPort = nil
+    }
+    
+    func is
 }
