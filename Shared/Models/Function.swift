@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FunctionParameterType: Int, Codable {
+enum ParameterDirection: Int, Codable {
     case In
     case Out
     case InOut
@@ -18,7 +18,7 @@ struct FunctionInput: Codable {
     let label: String
     let type: String
     let order: Int
-    let direction: FunctionParameterType
+    let direction: ParameterDirection
     let defaultValue: String
 }
 
@@ -27,11 +27,12 @@ struct FunctionOutput: Codable {
     let label: String
     let type: String
     let order: Int
-    let direction: FunctionParameterType
+    let direction: ParameterDirection
 }
 
 struct Function: Codable {
-    let name: String
+    var name: String
+    let label: String
     let inputs: [FunctionInput]
     let outputs: [FunctionInput]
 }
