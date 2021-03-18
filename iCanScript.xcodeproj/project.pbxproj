@@ -27,6 +27,8 @@
 		9463260825F8CD740058383B /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463260625F8CD740058383B /* Function.swift */; };
 		D07A8F9C2603BC4600C63A8E /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07A8F9B2603BC4600C63A8E /* Types.swift */; };
 		D07A8F9D2603BC4600C63A8E /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07A8F9B2603BC4600C63A8E /* Types.swift */; };
+		D07A8FA72603BCB200C63A8E /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07A8FA62603BCB200C63A8E /* Index.swift */; };
+		D07A8FA82603BCB200C63A8E /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07A8FA62603BCB200C63A8E /* Index.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		946325E225F8C55A0058383B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9463260625F8CD740058383B /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		D07A8F9B2603BC4600C63A8E /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		D07A8FA62603BCB200C63A8E /* Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Index.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,7 @@
 				944E4B1326002E6D00BC62A2 /* Node.swift */,
 				944E4B1A26002E7E00BC62A2 /* Port.swift */,
 				D07A8F9B2603BC4600C63A8E /* Types.swift */,
+				D07A8FA62603BCB200C63A8E /* Index.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -361,6 +365,7 @@
 				946325E525F8C55A0058383B /* iCanScriptApp.swift in Sources */,
 				944E4B1426002E6D00BC62A2 /* Node.swift in Sources */,
 				946325E725F8C55A0058383B /* ContentView.swift in Sources */,
+				D07A8FA72603BCB200C63A8E /* Index.swift in Sources */,
 				D07A8F9C2603BC4600C63A8E /* Types.swift in Sources */,
 				9463260725F8CD740058383B /* Function.swift in Sources */,
 				944E4B1B26002E7E00BC62A2 /* Port.swift in Sources */,
@@ -376,6 +381,7 @@
 				946325E625F8C55A0058383B /* iCanScriptApp.swift in Sources */,
 				944E4B1526002E6D00BC62A2 /* Node.swift in Sources */,
 				946325E825F8C55A0058383B /* ContentView.swift in Sources */,
+				D07A8FA82603BCB200C63A8E /* Index.swift in Sources */,
 				D07A8F9D2603BC4600C63A8E /* Types.swift in Sources */,
 				9463260825F8CD740058383B /* Function.swift in Sources */,
 				944E4B1C26002E7E00BC62A2 /* Port.swift in Sources */,

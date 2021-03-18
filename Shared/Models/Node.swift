@@ -7,10 +7,4 @@
 
 import Foundation
 
-class FunctionNode: Codable {
-    var label: String                   // The user visible label
-    let fullyQualifiedSignature: String // The fully qualified signature of the function
-    let ports: [FunctionPort]
-    
-}
-
+class Node {}
