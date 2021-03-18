@@ -1,8 +1,8 @@
 //
-//  LibraryDefinitions.swift
+//  Types.swift
 //  iCanScript
 //
-//  Created by Michel Launier on 2021-03-16.
+//  Created by Michel Launier on 2021-03-18.
 //
 
 import Foundation
