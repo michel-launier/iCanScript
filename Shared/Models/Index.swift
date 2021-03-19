@@ -27,11 +27,4 @@ struct Index {
     var isPort: Bool {
         return objectType == ObjectType.Port
     }
-    
-    func getNode() -> Node? {
-        guard isNode else {
-            return nil
-        }
-        
-    }
 }
