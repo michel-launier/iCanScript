@@ -13,18 +13,18 @@ struct Index {
     var index: Int = 0
 
     enum ObjectType {
-        case Unknown    // Index entry not defined
-        case Node       // This index is for a node
-        case Port       // This index if for a port
+        case Unknown        // Unused index
+        case Project        // References a project
+        case Package        // References a package
+        case Script         // References a visual script
+        case Node           // References a node
+        case Port           // References a port
     }
 
-    var isValid: Bool {
-        return objectType != ObjectType.Unknown
-    }
-    var isNode: Bool {
-        return objectType == ObjectType.Node
-    }
-    var isPort: Bool {
-        return objectType == ObjectType.Port
-    }
+    var isValid: Bool   { return objectType != ObjectType.Unknown }
+    var isProject: Bool { return objectType == ObjectType.Project }
+    var isPackage: Bool { return objectType == ObjectType.Package }
+    var isScript: Bool  { return objectType == ObjectType.Script }
+    var isNode: Bool    { return objectType == ObjectType.Node }
+    var isPort: Bool    { return objectType == ObjectType.Port }
 }
