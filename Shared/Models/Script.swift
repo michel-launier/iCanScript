@@ -8,5 +8,5 @@
 import Foundation
 
 class Script: Codable {
-    
+    var name: String
 }
