@@ -42,7 +42,7 @@ namespace iCanScript.Internal.Editor {
     		}
     		// Adjust the indexes of parent & child ports.
             int idx= 0;
-            port.PortIndex= (int)iCS_PortIndex.Return;
+            port.PortIndex= (int)PortIndex.Return;
             port.ForEachChildPort(
                 c=> {
                     c.PortIndex= idx++;

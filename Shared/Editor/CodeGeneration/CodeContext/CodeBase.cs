@@ -789,7 +789,7 @@ namespace iCanScript.Internal.Editor.CodeGeneration {
         static void ForEachParameter(iCS_EditorObject node, Action<iCS_EditorObject> fnc) {
             node.ForEachChildPort(
         		p=> {
-        			if(p.PortIndex < (int)iCS_PortIndex.ParametersEnd) {
+        			if(p.PortIndex < (int)PortIndex.ParametersEnd) {
                         fnc(p);
         			}
         		}        
@@ -827,7 +827,7 @@ namespace iCanScript.Internal.Editor.CodeGeneration {
     		var nbParams= 0;
     		node.ForEachChildPort(
     			p=> {
-    				if(p.PortIndex < (int)iCS_PortIndex.ParametersEnd) {
+    				if(p.PortIndex < (int)PortIndex.ParametersEnd) {
     					if(p.PortIndex+1 > nbParams) {
     						nbParams= p.PortIndex+1;
     					}
@@ -848,7 +848,7 @@ namespace iCanScript.Internal.Editor.CodeGeneration {
             iCS_EditorObject result= null;
             node.ForEachChildPort(
                 p=> {
-                    if(p.PortIndex == (int)iCS_PortIndex.Return) {
+                    if(p.PortIndex == (int)PortIndex.Return) {
                         result= p;
                     }
                 }
@@ -1165,7 +1165,7 @@ namespace iCanScript.Internal.Editor.CodeGeneration {
 			}
 #if OPTIMIZATION
             // Accept return value if we are the only consumer.
-            if(producerPort.PortIndex == (int)iCS_PortIndex.Return) {
+            if(producerPort.PortIndex == (int)PortIndex.Return) {
                 var producerCode= FindCodeBase(producerParent);
                 if(producerCode.Parent != allowedParent) return false;
                 var parameters= GetParameters(producerParent);

@@ -30,7 +30,7 @@ public class EventHandlerDefinition : FunctionDefinition {
         void CreateLocalVariables() {
     		VSObject.ForEachChildPort(
     			p=> {
-    				if(p.PortIndex < (int)iCS_PortIndex.ParametersEnd) {
+    				if(p.PortIndex < (int)PortIndex.ParametersEnd) {
                         if(p.IsInProposedDataPort && iCS_Types.IsA<Component>(p.RuntimeType)) {
                             new LocalVariableDefinition(p, this);
                         }
@@ -65,7 +65,7 @@ public class EventHandlerDefinition : FunctionDefinition {
             var indent= ToIndent(indentSize+1);
     		VSObject.ForEachChildPort(
     			p=> {
-    				if(p.PortIndex < (int)iCS_PortIndex.ParametersEnd) {
+    				if(p.PortIndex < (int)PortIndex.ParametersEnd) {
                         if(p.IsInProposedDataPort && iCS_Types.IsA<Component>(p.RuntimeType)) {
                             result.Append(indent);
                             result.Append("var ");

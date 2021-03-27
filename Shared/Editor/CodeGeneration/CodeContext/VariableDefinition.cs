@@ -90,7 +90,7 @@ namespace iCanScript.Internal.Editor.CodeGeneration {
                     var initValues= new string[nbOfParams];
                     myVSObject.ForEachChildPort(
                         p=> {
-                            if(p.PortIndex < (int)iCS_PortIndex.ParametersEnd) {
+                            if(p.PortIndex < (int)PortIndex.ParametersEnd) {
                                 initValues[p.PortIndex]= GetValueFor(p);
                             }
                         }

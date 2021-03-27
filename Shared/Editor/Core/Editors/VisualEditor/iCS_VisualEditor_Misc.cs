@@ -245,7 +245,7 @@ public partial class iCS_VisualEditor : iCS_EditorBase {
 			IStorage.SetSource(firstChildMux, source);
 			IStorage.SetSource(parentMuxPort, null);
 			parentMuxPort.ObjectType= parentMuxPort.IsInputPort ? VSObjectType.InParentMuxPort : VSObjectType.OutParentMuxPort;
-            parentMuxPort.PortIndex= (int)iCS_PortIndex.Return;
+            parentMuxPort.PortIndex= (int)PortIndex.Return;
 		}
 		// Create new mux input port.
 		var childMuxPort= IStorage.CreatePort(fixPort.DisplayName, parentMuxPort.InstanceId, parentMuxPort.RuntimeType, childPortType);

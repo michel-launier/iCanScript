@@ -298,8 +298,8 @@
 		D06FF955260F9C7D00254684 /* Prelude_Equal.cs in Resources */ = {isa = PBXBuildFile; fileRef = D06FF910260F9C7D00254684 /* Prelude_Equal.cs */; };
 		D06FF957260F9C7D00254684 /* iCS_Debug.cs in Resources */ = {isa = PBXBuildFile; fileRef = D06FF912260F9C7D00254684 /* iCS_Debug.cs */; };
 		D06FFD44260F9CBF00254684 /* iCS_DisplayOptionEnum.cs in Resources */ = {isa = PBXBuildFile; fileRef = D06FFD0A260F9CBF00254684 /* iCS_DisplayOptionEnum.cs */; };
-		D06FFD46260F9CBF00254684 /* EdgeEnum.swift in Resources */ = {isa = PBXBuildFile; fileRef = D06FFD0B260F9CBF00254684 /* EdgeEnum.swift */; };
-		D06FFD48260F9CBF00254684 /* iCS_PortIndex.cs in Resources */ = {isa = PBXBuildFile; fileRef = D06FFD0C260F9CBF00254684 /* iCS_PortIndex.cs */; };
+		D06FFD46260F9CBF00254684 /* NodeEdge.swift in Resources */ = {isa = PBXBuildFile; fileRef = D06FFD0B260F9CBF00254684 /* NodeEdge.swift */; };
+		D06FFD48260F9CBF00254684 /* PortIndex.swift in Resources */ = {isa = PBXBuildFile; fileRef = D06FFD0C260F9CBF00254684 /* PortIndex.swift */; };
 		D06FFD4A260F9CBF00254684 /* VSObjectType.cs in Resources */ = {isa = PBXBuildFile; fileRef = D06FFD0D260F9CBF00254684 /* VSObjectType.cs */; };
 		D06FFD4C260F9CBF00254684 /* iCS_EngineObject.cs in Resources */ = {isa = PBXBuildFile; fileRef = D06FFD0E260F9CBF00254684 /* iCS_EngineObject.cs */; };
 		D06FFD4E260F9CBF00254684 /* iCS_Types.cs in Resources */ = {isa = PBXBuildFile; fileRef = D06FFD0F260F9CBF00254684 /* iCS_Types.cs */; };
@@ -661,8 +661,8 @@
 		D06FF910260F9C7D00254684 /* Prelude_Equal.cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Prelude_Equal.cs; sourceTree = "<group>"; };
 		D06FF912260F9C7D00254684 /* iCS_Debug.cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iCS_Debug.cs; sourceTree = "<group>"; };
 		D06FFD0A260F9CBF00254684 /* iCS_DisplayOptionEnum.cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iCS_DisplayOptionEnum.cs; sourceTree = "<group>"; };
-		D06FFD0B260F9CBF00254684 /* EdgeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdgeEnum.swift; sourceTree = "<group>"; };
-		D06FFD0C260F9CBF00254684 /* iCS_PortIndex.cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iCS_PortIndex.cs; sourceTree = "<group>"; };
+		D06FFD0B260F9CBF00254684 /* NodeEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeEdge.swift; sourceTree = "<group>"; };
+		D06FFD0C260F9CBF00254684 /* PortIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortIndex.swift; sourceTree = "<group>"; };
 		D06FFD0D260F9CBF00254684 /* VSObjectType.cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VSObjectType.cs; sourceTree = "<group>"; };
 		D06FFD0E260F9CBF00254684 /* iCS_EngineObject.cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iCS_EngineObject.cs; sourceTree = "<group>"; };
 		D06FFD0F260F9CBF00254684 /* iCS_Types.cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iCS_Types.cs; sourceTree = "<group>"; };
@@ -1449,8 +1449,8 @@
 			isa = PBXGroup;
 			children = (
 				D06FFD0A260F9CBF00254684 /* iCS_DisplayOptionEnum.cs */,
-				D06FFD0B260F9CBF00254684 /* EdgeEnum.swift */,
-				D06FFD0C260F9CBF00254684 /* iCS_PortIndex.cs */,
+				D06FFD0B260F9CBF00254684 /* NodeEdge.swift */,
+				D06FFD0C260F9CBF00254684 /* PortIndex.swift */,
 				D06FFD0D260F9CBF00254684 /* VSObjectType.cs */,
 				D06FFD0E260F9CBF00254684 /* iCS_EngineObject.cs */,
 				D06FFD0F260F9CBF00254684 /* iCS_Types.cs */,
@@ -1813,7 +1813,7 @@
 				D06F0356260F9D7A00254684 /* iCS_TextUtil.cs in Resources */,
 				D06FFD4C260F9CBF00254684 /* iCS_EngineObject.cs in Resources */,
 				D06FFD96260F9CBF00254684 /* iCS_IVisualScriptData.cs in Resources */,
-				D06FFD48260F9CBF00254684 /* iCS_PortIndex.cs in Resources */,
+				D06FFD48260F9CBF00254684 /* PortIndex.swift in Resources */,
 				D06F0338260F9D7A00254684 /* iCS_Graphics.cs in Resources */,
 				D06F04DA260F9D7A00254684 /* iCS_IStorage_StorageMgmt.cs in Resources */,
 				D06F0452260F9D7A00254684 /* LocalVariableDefinition.cs in Resources */,
@@ -1980,7 +1980,7 @@
 				D06FFD82260F9CBF00254684 /* iCS_StorageImp.cs in Resources */,
 				D06FF915260F9C7D00254684 /* DynamicInvoke.cs in Resources */,
 				D06FFD98260F9CBF00254684 /* iCS_VisualScriptData_Queries.cs in Resources */,
-				D06FFD46260F9CBF00254684 /* EdgeEnum.swift in Resources */,
+				D06FFD46260F9CBF00254684 /* NodeEdge.swift in Resources */,
 				D06F04FC260F9D7A00254684 /* iCS_SoftwareUpdateView.cs in Resources */,
 				D06F02CC260F9D7A00254684 /* LibraryProperty.cs in Resources */,
 				D06F0406260F9D7A00254684 /* iCS_UserCommands_ObjectDrag.cs in Resources */,

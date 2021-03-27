@@ -150,11 +150,11 @@ namespace iCanScript.Internal.Engine {
 
     	// Parameter Data Flow Ports
     	public static bool IsParameterPort        (iCS_EngineObject obj) { return IsPort(obj) &&
-    	                                                                          obj.PortIndex >= (int)iCS_PortIndex.ParametersStart &&
-    	                                                                          obj.PortIndex <= (int)iCS_PortIndex.ParametersEnd; }
+    	                                                                          obj.PortIndex >= (int)PortIndex.ParametersStart &&
+    	                                                                          obj.PortIndex <= (int)PortIndex.ParametersEnd; }
     	public static bool IsInParameterPort	  (iCS_EngineObject obj) { return IsInputPort(obj) && IsParameterPort(obj); }
     	public static bool IsOutParameterPort     (iCS_EngineObject obj) { return IsOutputPort(obj) && IsParameterPort(obj); }
-    	public static bool IsReturnPort			  (iCS_EngineObject obj) { return IsOutFixDataPort(obj) && obj.PortIndex == (int)iCS_PortIndex.Return; }
+    	public static bool IsReturnPort			  (iCS_EngineObject obj) { return IsOutFixDataPort(obj) && obj.PortIndex == (int)PortIndex.Return; }
 
         // Control Ports
         public static bool IsControlPort          (iCS_EngineObject obj) { return IsEnablePort(obj) || IsTriggerPort(obj); }
@@ -178,8 +178,8 @@ namespace iCanScript.Internal.Engine {
     	public static bool IsOutChildMuxPort	  (iCS_EngineObject obj) { return obj.ObjectType == VSObjectType.OutChildMuxPort; }
 
     	// Instance Ports
-    	public static bool IsTargetPort		      (iCS_EngineObject obj) { return obj.PortIndex == (int)iCS_PortIndex.Target; }
-    	public static bool IsSelfPort	          (iCS_EngineObject obj) { return obj.PortIndex == (int)iCS_PortIndex.Self; }
+    	public static bool IsTargetPort		      (iCS_EngineObject obj) { return obj.PortIndex == (int)PortIndex.Target; }
+    	public static bool IsSelfPort	          (iCS_EngineObject obj) { return obj.PortIndex == (int)PortIndex.Self; }
     }
 
 }

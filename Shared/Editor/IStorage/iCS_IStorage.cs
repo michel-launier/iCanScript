@@ -564,7 +564,7 @@ namespace iCanScript.Internal.Editor {
     			var parameterType= p.ParameterType;
                 if(parameterType != typeof(void)) {
                     VSObjectType portType= p.IsOut ? VSObjectType.OutFixDataPort : VSObjectType.InFixDataPort;
-                    var port= CreatePort(p.Name, nodeId, parameterType, portType, (int)iCS_PortIndex.ParametersStart+idx);
+                    var port= CreatePort(p.Name, nodeId, parameterType, portType, (int)PortIndex.ParametersStart+idx);
     				object initialValue= p.DefaultValue;
     				if(initialValue == null || initialValue.GetType() != parameterType) {
     					initialValue= iCS_Types.DefaultValue(parameterType);
@@ -587,7 +587,7 @@ namespace iCanScript.Internal.Editor {
 				if(returnName.StartsWith("get_")) {
 					returnName= returnName.Substring(4);
 				}
-                CreatePort(returnName, node.InstanceId, returnType, VSObjectType.OutFixDataPort, (int)iCS_PortIndex.Return);
+                CreatePort(returnName, node.InstanceId, returnType, VSObjectType.OutFixDataPort, (int)PortIndex.Return);
     		}
 		}
 		
@@ -719,7 +719,7 @@ namespace iCanScript.Internal.Editor {
 			var instance= CreateBaseConstructorCallNode(parentId, libraryConstructor, VSObjectType.Constructor);
     		// -- Create return port (Self). --
 			var declaringType= libraryConstructor.declaringType;
-            CreatePort("Self", instance.InstanceId, declaringType, VSObjectType.OutFixDataPort, (int)iCS_PortIndex.Return);
+            CreatePort("Self", instance.InstanceId, declaringType, VSObjectType.OutFixDataPort, (int)PortIndex.Return);
     		return instance;
         }
         // ----------------------------------------------------------------------
@@ -780,7 +780,7 @@ namespace iCanScript.Internal.Editor {
 			var fieldName= libraryField.fieldName;
             var fieldType= libraryField.fieldType;
             var portType = VSObjectType.OutFixDataPort;
-            var portIndex= (int)iCS_PortIndex.Return;
+            var portIndex= (int)PortIndex.Return;
             CreatePort(fieldName, instance.InstanceId, fieldType, portType, portIndex);
             return instance;
         }
@@ -827,7 +827,7 @@ namespace iCanScript.Internal.Editor {
             var fieldName= libraryField.fieldName;
             var fieldType= libraryField.fieldType;
             var portType = VSObjectType.InFixDataPort;
-            var portIndex= (int)iCS_PortIndex.ParametersStart;
+            var portIndex= (int)PortIndex.ParametersStart;
             CreatePort(fieldName, instance.InstanceId, fieldType, portType, portIndex);
             return instance;
         }
@@ -874,7 +874,7 @@ namespace iCanScript.Internal.Editor {
             var propertyName= libraryProperty.propertyName.Substring(4);
             var propertyType= libraryProperty.parameters[0].ParameterType;
             var portType = VSObjectType.InFixDataPort;
-            var portIndex= (int)iCS_PortIndex.ParametersStart;
+            var portIndex= (int)PortIndex.ParametersStart;
             CreatePort(propertyName, instance.InstanceId, propertyType, portType, portIndex);
             return instance;
         }
@@ -949,7 +949,7 @@ namespace iCanScript.Internal.Editor {
 				var paramName= parameterNames[parameterIdx];
                 if(paramType != typeof(void)) {
                     VSObjectType portType= VSObjectType.InFixDataPort;
-                    port= CreatePort(paramName, id, paramType, portType, (int)iCS_PortIndex.ParametersStart+parameterIdx);
+                    port= CreatePort(paramName, id, paramType, portType, (int)PortIndex.ParametersStart+parameterIdx);
                     port.Value= iCS_Types.DefaultValue(paramType);
                 }
             }
@@ -980,7 +980,7 @@ namespace iCanScript.Internal.Editor {
     	}
         // ----------------------------------------------------------------------
     	private iCS_EditorObject CreateParameterPort(string name, int parentId, Type valueType, VSObjectType portType, int index) {
-    		if(index < (int)iCS_PortIndex.ParametersStart || index > (int)iCS_PortIndex.ParametersEnd) {
+    		if(index < (int)PortIndex.ParametersStart || index > (int)PortIndex.ParametersEnd) {
     			Debug.LogError("iCanScript: Invalid parameter port index: "+index);
     		}
     		return CreatePort(name, parentId, valueType, portType, index);

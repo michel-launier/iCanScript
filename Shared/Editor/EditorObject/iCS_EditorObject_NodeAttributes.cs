@@ -70,7 +70,7 @@ namespace iCanScript.Internal.Editor {
                 iCS_EditorObject result= null;
                 ForEachChildPort(
                     p=> {
-                        if(p.PortIndex == (int)iCS_PortIndex.Target) {
+                        if(p.PortIndex == (int)PortIndex.Target) {
                             result= p;
                         }
                     }
@@ -88,7 +88,7 @@ namespace iCanScript.Internal.Editor {
                 iCS_EditorObject result= null;
                 ForEachChildPort(
                     p=> {
-                        if(p.PortIndex == (int)iCS_PortIndex.Self) {
+                        if(p.PortIndex == (int)PortIndex.Self) {
                             result= p;
                         }
                     }
@@ -106,7 +106,7 @@ namespace iCanScript.Internal.Editor {
                 iCS_EditorObject result= null;
                 ForEachChildPort(
                     p=> {
-                        if(p.PortIndex == (int)iCS_PortIndex.Return) {
+                        if(p.PortIndex == (int)PortIndex.Return) {
                             result= p;
                         }
                     }

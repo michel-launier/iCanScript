@@ -13,7 +13,7 @@ namespace iCanScript.Internal.Editor {
         public iCS_EditorObject CreateTriggerPort(int parentId) {
             var existingTriggerPort= GetTriggerPort(EditorObjects[parentId]);
             if(existingTriggerPort != null) return existingTriggerPort;
-            iCS_EditorObject port= CreatePort(iCS_Strings.TriggerPort, parentId, typeof(bool), VSObjectType.TriggerPort, (int)iCS_PortIndex.Trigger);
+            iCS_EditorObject port= CreatePort(iCS_Strings.TriggerPort, parentId, typeof(bool), VSObjectType.TriggerPort, (int)PortIndex.Trigger);
             port.Value= true;
             return port;
         }
@@ -45,15 +45,15 @@ namespace iCanScript.Internal.Editor {
         // -------------------------------------------------------------------------
         public int GetNextAvailableEnablePortIndex(iCS_EditorObject node) {
             var enables= CleanupEnablePorts(node);
-            if(enables == null) return (int)iCS_PortIndex.EnablesStart;
-            return (int)iCS_PortIndex.EnablesStart + enables.Length;
+            if(enables == null) return (int)PortIndex.EnablesStart;
+            return (int)PortIndex.EnablesStart + enables.Length;
         }
         // -------------------------------------------------------------------------
         public iCS_EditorObject[] CleanupEnablePorts(iCS_EditorObject node) {
             var enables= GetEnablePorts(node);
             if(enables == null || enables.Length == 0) return null;
             for(int i= 0; i < enables.Length; ++i) {
-                enables[i].PortIndex= (int)iCS_PortIndex.EnablesStart+i;
+                enables[i].PortIndex= (int)PortIndex.EnablesStart+i;
             }
             return enables;
         }
@@ -93,7 +93,7 @@ namespace iCanScript.Internal.Editor {
             }
             var portName= "Target";
     		var port= CreatePort(portName, parentId, runtimeType,
-    							 VSObjectType.InFixDataPort, (int)iCS_PortIndex.Target);
+    							 VSObjectType.InFixDataPort, (int)PortIndex.Target);
     		return port;
     	}
 
@@ -151,7 +151,7 @@ namespace iCanScript.Internal.Editor {
                 return null;            
             }
             iCS_EditorObject port= CreatePort("Self", parentId, runtimeType,
-                                              VSObjectType.OutProposedDataPort, (int)iCS_PortIndex.Self);
+                                              VSObjectType.OutProposedDataPort, (int)PortIndex.Self);
             return port;
         }
         // -------------------------------------------------------------------------
@@ -214,7 +214,7 @@ namespace iCanScript.Internal.Editor {
             var parent= EditorObjects[parentId];
             if(index == -1) {
                 if(portType == VSObjectType.TriggerPort) {
-                    index= (int)iCS_PortIndex.Trigger;
+                    index= (int)PortIndex.Trigger;
                 } if(portType == VSObjectType.EnablePort) {
                     index= GetNextAvailableEnablePortIndex(parent);
                 }
@@ -276,7 +276,7 @@ namespace iCanScript.Internal.Editor {
             node.ForEachChildPort(
                 p=> {
                     var idx= p.PortIndex;
-                    if(idx < (int)iCS_PortIndex.ParametersEnd) {
+                    if(idx < (int)PortIndex.ParametersEnd) {
                         if(lastIdx <= idx) {
                             lastIdx= idx+1;                            
                         }

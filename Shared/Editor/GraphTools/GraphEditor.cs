@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System;
 using System.Collections;
 using iCanScript.Internal.Engine;
@@ -54,7 +54,7 @@ namespace iCanScript.Internal.Editor {
             var enablePorts= node.BuildListOfChildPorts(p=> p.IsEnablePort);
             Array.Sort(enablePorts, (x,y)=> x.PortIndex - y.PortIndex);
             for(int i= 0; i < enablePorts.Length; ++i) {
-                enablePorts[i].PortIndex= i + (int)iCS_PortIndex.EnablesStart;
+                enablePorts[i].PortIndex= i + (int)PortIndex.EnablesStart;
             }
         }
         

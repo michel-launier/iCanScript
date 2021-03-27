@@ -466,7 +466,7 @@ namespace iCanScript.Internal.Editor {
 			var paramPorts= BuildListOfChildPorts(
 				p=> {
 					var portIndex= p.PortIndex;
-					return portIndex >= (int)iCS_PortIndex.ParametersStart && portIndex < (int)iCS_PortIndex.ParametersEnd;
+					return portIndex >= (int)PortIndex.ParametersStart && portIndex < (int)PortIndex.ParametersEnd;
 				}
 			);
 			Array.Sort(paramPorts, (x,y)=> y.PortIndex-x.PortIndex);
@@ -478,7 +478,7 @@ namespace iCanScript.Internal.Editor {
         /// @return The return port if found. _null_ otherwise.
         ///
         public iCS_EditorObject GetReturnPort() {
-            return GetPortWithIndex((int)iCS_PortIndex.Return);
+            return GetPortWithIndex((int)PortIndex.Return);
         }
         // ----------------------------------------------------------------------
         /// Returns the port with the given port index.

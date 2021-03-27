@@ -16,13 +16,13 @@ namespace iCanScript.Internal.Editor {
             Type classType= module.RuntimeType;
             if(!iCS_Types.IsStaticClass(classType)) {
                 PropertiesWizardCreatePortIfNonExisting(module, "Target", classType,
-                                                      VSObjectType.InFixDataPort, (int)iCS_PortIndex.Target);
+                                                      VSObjectType.InFixDataPort, (int)PortIndex.Target);
             }
             module.Fold();
         }
         // ----------------------------------------------------------------------
         public iCS_EditorObject CreateInputInstancePort(Type classType, iCS_EditorObject instanceNode) {
-            return PropertiesWizardCreatePortIfNonExisting(instanceNode, "Target", classType, VSObjectType.InFixDataPort, (int)iCS_PortIndex.Target);
+            return PropertiesWizardCreatePortIfNonExisting(instanceNode, "Target", classType, VSObjectType.InFixDataPort, (int)PortIndex.Target);
         }
 
         // ======================================================================
@@ -189,7 +189,7 @@ namespace iCanScript.Internal.Editor {
     
         // ----------------------------------------------------------------------
         public iCS_EditorObject FindInputInstancePortOn(iCS_EditorObject module) {
-            var portId= (int)iCS_PortIndex.Target;
+            var portId= (int)PortIndex.Target;
             iCS_EditorObject result= null;
             UntilMatchingChildPort(module,
                 port=> {
@@ -204,7 +204,7 @@ namespace iCanScript.Internal.Editor {
         }
         // ----------------------------------------------------------------------
         iCS_EditorObject FindOutputInstancePortOn(iCS_EditorObject module) {
-            var portId= (int)iCS_PortIndex.Self;
+            var portId= (int)PortIndex.Self;
             iCS_EditorObject result= null;
             UntilMatchingChildPort(module,
                 port=> {
