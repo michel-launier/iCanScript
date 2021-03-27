@@ -100,21 +100,21 @@ namespace iCanScript.Internal.Engine {
             get { return NbOfParams; }
             set { NbOfParams= value; }
         }
-        public iCS_EdgeEnum Edge {
+        public NodeEdge Edge {
             get {
                 var edge= LocalAnchorPosition.x;
-                if(Math3D.IsEqual(edge, 1f)) return iCS_EdgeEnum.Left;
-                if(Math3D.IsEqual(edge, 2f)) return iCS_EdgeEnum.Right;
-                if(Math3D.IsEqual(edge, 3f)) return iCS_EdgeEnum.Top;
-                if(Math3D.IsEqual(edge, 4f)) return iCS_EdgeEnum.Bottom;
-                return iCS_EdgeEnum.None;
+                if(Math3D.IsEqual(edge, 1f)) return NodeEdge.Left;
+                if(Math3D.IsEqual(edge, 2f)) return NodeEdge.Right;
+                if(Math3D.IsEqual(edge, 3f)) return NodeEdge.Top;
+                if(Math3D.IsEqual(edge, 4f)) return NodeEdge.Bottom;
+                return NodeEdge.None;
             }
             set {
                 switch(value) {
-                    case iCS_EdgeEnum.Left  : LocalAnchorPosition.x= 1f; break;
-                    case iCS_EdgeEnum.Right : LocalAnchorPosition.x= 2f; break;
-                    case iCS_EdgeEnum.Top   : LocalAnchorPosition.x= 3f; break;
-                    case iCS_EdgeEnum.Bottom: LocalAnchorPosition.x= 4f; break;
+                    case NodeEdge.Left  : LocalAnchorPosition.x= 1f; break;
+                    case NodeEdge.Right : LocalAnchorPosition.x= 2f; break;
+                    case NodeEdge.Top   : LocalAnchorPosition.x= 3f; break;
+                    case NodeEdge.Bottom: LocalAnchorPosition.x= 4f; break;
                     default                 : LocalAnchorPosition.x= 0f; break;
                 }
             }
@@ -136,7 +136,7 @@ namespace iCanScript.Internal.Engine {
             QualifiedType= type.AssemblyQualifiedName;
             LocalAnchorPosition= Vector2.zero;
             if(IsDataOrControlPort) {
-                Edge= IsInputPort ? (IsEnablePort ? iCS_EdgeEnum.Top : iCS_EdgeEnum.Left) : iCS_EdgeEnum.Right;
+                Edge= IsInputPort ? (IsEnablePort ? NodeEdge.Top : NodeEdge.Left) : NodeEdge.Right;
             }
         }
         // ----------------------------------------------------------------------
@@ -217,7 +217,7 @@ namespace iCanScript.Internal.Engine {
             IconGUID= null;
             Description = null;
     		// Port
-            Edge= iCS_EdgeEnum.None;
+            Edge= NodeEdge.None;
             SourceId= -1;
     		PortIndex= -1;
     		InitialValueArchive= null;

@@ -895,23 +895,23 @@ namespace iCanScript.Internal.Editor {
     
     
     	// ----------------------------------------------------------------------
-        void DrawInMuxPort(Vector3 _center, Color _fillColor, bool isSelected, iCS_EdgeEnum edge) {
+        void DrawInMuxPort(Vector3 _center, Color _fillColor, bool isSelected, NodeEdge edge) {
     		Vector3 center= TranslateAndScale(_center);
     		Texture2D portIcon= null; 
             switch(edge) {
-                case iCS_EdgeEnum.Top:
+                case NodeEdge.Top:
         		    portIcon= isSelected ? iCS_PortIcons.GetSelectedInMuxPortTopIcon(_fillColor) :
         		                           iCS_PortIcons.GetInMuxPortTopIcon(_fillColor);
         		    break;
-                case iCS_EdgeEnum.Bottom:
+                case NodeEdge.Bottom:
         		    portIcon= isSelected ? iCS_PortIcons.GetSelectedInMuxPortBottomIcon(_fillColor) :
         		                           iCS_PortIcons.GetInMuxPortBottomIcon(_fillColor);
         		    break;
-                case iCS_EdgeEnum.Left:
+                case NodeEdge.Left:
         		    portIcon= isSelected ? iCS_PortIcons.GetSelectedInMuxPortLeftIcon(_fillColor) :
         		                           iCS_PortIcons.GetInMuxPortLeftIcon(_fillColor);
         		    break;
-                case iCS_EdgeEnum.Right:
+                case NodeEdge.Right:
                 default:
         		    portIcon= isSelected ? iCS_PortIcons.GetSelectedInMuxPortRightIcon(_fillColor) :
         		                           iCS_PortIcons.GetInMuxPortRightIcon(_fillColor);
@@ -924,23 +924,23 @@ namespace iCanScript.Internal.Editor {
     		GUI.DrawTexture(pos, portIcon);
         }   
     	// ----------------------------------------------------------------------
-        void DrawOutMuxPort(Vector3 _center, Color _fillColor, bool isSelected, iCS_EdgeEnum edge) {
+        void DrawOutMuxPort(Vector3 _center, Color _fillColor, bool isSelected, NodeEdge edge) {
     		Vector3 center= TranslateAndScale(_center);
     		Texture2D portIcon= null; 
             switch(edge) {
-                case iCS_EdgeEnum.Top:
+                case NodeEdge.Top:
         		    portIcon= isSelected ? iCS_PortIcons.GetSelectedOutMuxPortTopIcon(_fillColor) :
         		                           iCS_PortIcons.GetOutMuxPortTopIcon(_fillColor);
         		    break;
-                case iCS_EdgeEnum.Bottom:
+                case NodeEdge.Bottom:
         		    portIcon= isSelected ? iCS_PortIcons.GetSelectedOutMuxPortBottomIcon(_fillColor) :
         		                           iCS_PortIcons.GetOutMuxPortBottomIcon(_fillColor);
         		    break;
-                case iCS_EdgeEnum.Left:
+                case NodeEdge.Left:
         		    portIcon= isSelected ? iCS_PortIcons.GetSelectedOutMuxPortLeftIcon(_fillColor) :
         		                           iCS_PortIcons.GetOutMuxPortLeftIcon(_fillColor);
         		    break;
-                case iCS_EdgeEnum.Right:
+                case NodeEdge.Right:
                 default:
         		    portIcon= isSelected ? iCS_PortIcons.GetSelectedOutMuxPortRightIcon(_fillColor) :
         		                           iCS_PortIcons.GetOutMuxPortRightIcon(_fillColor);
@@ -1130,8 +1130,8 @@ namespace iCanScript.Internal.Editor {
         public void ShowBindingArrow(iCS_EditorObject port, Vector2 pos, Vector2 tangent, Color bindingColor) {
             DirectionEnum dir= DirectionEnum.Up;
             switch(port.Edge) {
-                case iCS_EdgeEnum.Top:
-                case iCS_EdgeEnum.Bottom: {
+                case NodeEdge.Top:
+                case NodeEdge.Bottom: {
                     if(tangent.y < 0) {
                         dir= DirectionEnum.Down;                                        
                     }
@@ -1140,8 +1140,8 @@ namespace iCanScript.Internal.Editor {
                     }
                     break;
                 }
-                case iCS_EdgeEnum.Left:
-                case iCS_EdgeEnum.Right: {
+                case NodeEdge.Left:
+                case NodeEdge.Right: {
                     if(tangent.x < 0) {
                         dir= DirectionEnum.Right;
                     }
@@ -1156,8 +1156,8 @@ namespace iCanScript.Internal.Editor {
         // ----------------------------------------------------------------------
         public Vector2 GetBindingEndPosition(iCS_EditorObject port, Vector2 endPos, Vector2 tangent) {
             switch(port.Edge) {
-                case iCS_EdgeEnum.Top:
-                case iCS_EdgeEnum.Bottom: {
+                case NodeEdge.Top:
+                case NodeEdge.Bottom: {
                     if(tangent.y < 0) {
                         endPos.y-= iCS_EditorConfig.PortDiameter;
                     }
@@ -1166,8 +1166,8 @@ namespace iCanScript.Internal.Editor {
                     }
                     break;
                 }
-                case iCS_EdgeEnum.Left:
-                case iCS_EdgeEnum.Right: {
+                case NodeEdge.Left:
+                case NodeEdge.Right: {
                     if(tangent.x < 0) {
                         endPos.x-= iCS_EditorConfig.PortDiameter;
                     }
@@ -1243,22 +1243,22 @@ namespace iCanScript.Internal.Editor {
         
         // ----------------------------------------------------------------------
         /// Returns the closest point on the given edge
-        Vector2 ClosestPointOnRectOnEdge(Rect r, Vector2 p, iCS_EdgeEnum edge) {
+        Vector2 ClosestPointOnRectOnEdge(Rect r, Vector2 p, NodeEdge edge) {
             Vector2 result= Vector2.zero;
             switch(edge) {
-                case iCS_EdgeEnum.Left: {
+                case NodeEdge.Left: {
                     result= Math3D.ClosestPointOnLineSegmentToPoint(Math3D.TopLeftCorner(r), Math3D.BottomLeftCorner(r), p);
                     break;
                 }
-                case iCS_EdgeEnum.Right: {
+                case NodeEdge.Right: {
                     result= Math3D.ClosestPointOnLineSegmentToPoint(Math3D.TopRightCorner(r), Math3D.BottomRightCorner(r), p);
                     break;                    
                 }
-                case iCS_EdgeEnum.Top: {
+                case NodeEdge.Top: {
                     result= Math3D.ClosestPointOnLineSegmentToPoint(Math3D.TopLeftCorner(r), Math3D.TopRightCorner(r), p);
                     break;
                 }
-                case iCS_EdgeEnum.Bottom: {
+                case NodeEdge.Bottom: {
                     result= Math3D.ClosestPointOnLineSegmentToPoint(Math3D.BottomLeftCorner(r), Math3D.BottomRightCorner(r), p);
                     break;
                 }

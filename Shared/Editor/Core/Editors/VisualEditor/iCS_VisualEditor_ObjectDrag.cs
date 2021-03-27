@@ -228,22 +228,22 @@ public partial class iCS_VisualEditor : iCS_EditorBase {
 				if(!fixPortParentRect.Contains(newPosition)) {
 					var dir= newPosition-fixPortParentCenter;
 					dir= Math3D.QuantizeAt90Degrees(dir);
-					iCS_EdgeEnum edge= iCS_EdgeEnum.None;
+					NodeEdge edge= NodeEdge.None;
 					if(Math3D.IsZero(dir.x)) {
-						edge= dir.y > 0 ? iCS_EdgeEnum.Bottom : iCS_EdgeEnum.Top;
+						edge= dir.y > 0 ? NodeEdge.Bottom : NodeEdge.Top;
 					} else {
-						edge= dir.x > 0 ? iCS_EdgeEnum.Right : iCS_EdgeEnum.Left;
+						edge= dir.x > 0 ? NodeEdge.Right : NodeEdge.Left;
 					}
 					if(edge != DragFixPort.Edge) {
 						var center= fixPortParentCenter;
 						switch(edge) {
-						case iCS_EdgeEnum.Top:
+						case NodeEdge.Top:
 							newPosition= new Vector2(center.x, fixPortParentRect.yMin);
 							break;
-						case iCS_EdgeEnum.Bottom:
+						case NodeEdge.Bottom:
 							newPosition= new Vector2(center.x, fixPortParentRect.yMax);
 							break;
-						case iCS_EdgeEnum.Left:
+						case NodeEdge.Left:
 							newPosition= new Vector2(fixPortParentRect.xMin, center.y);
 							break;
 						default:
@@ -502,7 +502,7 @@ public partial class iCS_VisualEditor : iCS_EditorBase {
 						*/
 						// Allow output data connection on state modules.
                         if(DragFixPort.IsOutputPort && newPortParent != null && (newPortParent.IsState || newPortParent.IsStateChart)) {
-							if(newPortParent.IsPositionOnEdge(dragPortPos, iCS_EdgeEnum.Right)) {
+							if(newPortParent.IsPositionOnEdge(dragPortPos, NodeEdge.Right)) {
                                 iCS_EditorObject newPort= IStorage.CreatePort(DragFixPort.DisplayName, newPortParent.InstanceId, DragFixPort.RuntimeType, VSObjectType.OutDynamicDataPort);
                                 IStorage.SetNewDataConnection(newPort, DragFixPort);
                                 iCS_UserCommands.EndPortConnection(DragOriginalPort);

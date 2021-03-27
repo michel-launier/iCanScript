@@ -234,13 +234,13 @@ namespace iCanScript.Internal.Editor {
             }
     		// Set initial port edge.
     		if(port.IsEnablePort) {
-    			port.Edge= iCS_EdgeEnum.Top;
+    			port.Edge= NodeEdge.Top;
     		} else if(port.IsTriggerPort) {
-    			port.Edge= iCS_EdgeEnum.Bottom;
+    			port.Edge= NodeEdge.Bottom;
     		} else if(port.IsInputPort) {
-    			port.Edge= iCS_EdgeEnum.Left;
+    			port.Edge= NodeEdge.Left;
     		} else if(port.IsDataPort) {
-    			port.Edge= iCS_EdgeEnum.Right;
+    			port.Edge= NodeEdge.Right;
     		} else {
     			port.UpdatePortEdge();			
     		}

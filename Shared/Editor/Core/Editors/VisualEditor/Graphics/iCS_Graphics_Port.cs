@@ -114,19 +114,19 @@ namespace iCanScript.Internal.Editor {
             Vector2 labelSize= GetPortNameSize(port);
     		Vector2 labelPos= GetPortCenter(port);
             switch(port.Edge) {
-                case iCS_EdgeEnum.Left:
+                case NodeEdge.Left:
                     labelPos.x+= iCS_EditorConfig.PortDiameter;
                     labelPos.y-= 1 + 0.5f * labelSize.y/Scale;
                     break;
-                case iCS_EdgeEnum.Right:
+                case NodeEdge.Right:
                     labelPos.x-= labelSize.x/Scale + iCS_EditorConfig.PortDiameter;
                     labelPos.y-= 1 + 0.5f * labelSize.y/Scale;
                     break;
-                case iCS_EdgeEnum.Top:            
+                case NodeEdge.Top:            
                     labelPos.x-= 1 + 0.5f*labelSize.x/Scale;
                     labelPos.y-= iCS_EditorConfig.PortDiameter+0.8f*(labelSize.y/Scale);
                     break;
-                case iCS_EdgeEnum.Bottom:
+                case NodeEdge.Bottom:
                     labelPos.x-= 1 + 0.5f*labelSize.x/Scale;
                     labelPos.y+= iCS_EditorConfig.PortDiameter;
                     break;
@@ -193,17 +193,17 @@ namespace iCanScript.Internal.Editor {
     		Vector2 valueSize= GetPortValueSize(port);
     		Vector2 valuePos= GetPortCenter(port);
             switch(port.Edge) {
-                case iCS_EdgeEnum.Left:
+                case NodeEdge.Left:
     				valuePos.x-= valueSize.x/Scale + iCS_EditorConfig.PortDiameter;
     				valuePos.y-= 1 + 0.5f * valueSize.y/Scale;
                     break;
-                case iCS_EdgeEnum.Right:
+                case NodeEdge.Right:
     				valuePos.x+= iCS_EditorConfig.PortDiameter;
     				valuePos.y-= 1 + 0.5f * valueSize.y/Scale;
                     break;
-                case iCS_EdgeEnum.Top:            
+                case NodeEdge.Top:            
                     break;
-                case iCS_EdgeEnum.Bottom:
+                case NodeEdge.Bottom:
                     break;
             }
             return new Rect(valuePos.x, valuePos.y, valueSize.x, valueSize.y);	    

@@ -411,10 +411,10 @@ namespace iCanScript.Internal.Editor {
         public iCS_EditorObject[] BuildListOfPortsOnSameEdge() {
             Func<iCS_EditorObject,bool> cond= null;
             switch(Edge) {
-                case iCS_EdgeEnum.Left:     cond= p=> p.IsOnLeftEdge;   break;
-                case iCS_EdgeEnum.Right:    cond= p=> p.IsOnRightEdge;  break;
-                case iCS_EdgeEnum.Top:      cond= p=> p.IsOnTopEdge;    break;
-                case iCS_EdgeEnum.Bottom:   cond= p=> p.IsOnBottomEdge; break;
+                case NodeEdge.Left:     cond= p=> p.IsOnLeftEdge;   break;
+                case NodeEdge.Right:    cond= p=> p.IsOnRightEdge;  break;
+                case NodeEdge.Top:      cond= p=> p.IsOnTopEdge;    break;
+                case NodeEdge.Bottom:   cond= p=> p.IsOnBottomEdge; break;
                 default: break;
             }
             if(cond == null) return new iCS_EditorObject[0];

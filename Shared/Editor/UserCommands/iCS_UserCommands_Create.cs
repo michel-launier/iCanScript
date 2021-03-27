@@ -322,30 +322,30 @@ namespace iCanScript.Internal.Editor {
                 var diff= toStatePortPos-fromStatePortPos;
                 if(Mathf.Abs(diff.x) > Mathf.Abs(diff.y)) {
                     if(Vector2.Dot(diff, Vector2.right) > 0) {
-                        inTransitionPort.Edge= iCS_EdgeEnum.Left;
-                        toStatePort.Edge= iCS_EdgeEnum.Left;
-                        outTransitionPort.Edge= iCS_EdgeEnum.Right;
-                        fromStatePort.Edge= iCS_EdgeEnum.Right;
+                        inTransitionPort.Edge= NodeEdge.Left;
+                        toStatePort.Edge= NodeEdge.Left;
+                        outTransitionPort.Edge= NodeEdge.Right;
+                        fromStatePort.Edge= NodeEdge.Right;
                     }
                     else {
-                        inTransitionPort.Edge= iCS_EdgeEnum.Right;
-                        toStatePort.Edge= iCS_EdgeEnum.Right;
-                        outTransitionPort.Edge= iCS_EdgeEnum.Left;
-                        fromStatePort.Edge= iCS_EdgeEnum.Left;
+                        inTransitionPort.Edge= NodeEdge.Right;
+                        toStatePort.Edge= NodeEdge.Right;
+                        outTransitionPort.Edge= NodeEdge.Left;
+                        fromStatePort.Edge= NodeEdge.Left;
                     }
                 }
                 else {
                     if(Vector2.Dot(diff, Vector2.up) > 0) {
-                        inTransitionPort.Edge= iCS_EdgeEnum.Top;
-                        toStatePort.Edge= iCS_EdgeEnum.Top;
-                        outTransitionPort.Edge= iCS_EdgeEnum.Bottom; 
-                        fromStatePort.Edge= iCS_EdgeEnum.Bottom;
+                        inTransitionPort.Edge= NodeEdge.Top;
+                        toStatePort.Edge= NodeEdge.Top;
+                        outTransitionPort.Edge= NodeEdge.Bottom; 
+                        fromStatePort.Edge= NodeEdge.Bottom;
                     }
                     else {
-                        inTransitionPort.Edge= iCS_EdgeEnum.Bottom;
-                        toStatePort.Edge= iCS_EdgeEnum.Bottom;
-                        outTransitionPort.Edge= iCS_EdgeEnum.Top; 
-                        fromStatePort.Edge= iCS_EdgeEnum.Top;
+                        inTransitionPort.Edge= NodeEdge.Bottom;
+                        toStatePort.Edge= NodeEdge.Bottom;
+                        outTransitionPort.Edge= NodeEdge.Top; 
+                        fromStatePort.Edge= NodeEdge.Top;
                     }            
                 }
                 inTransitionPort.PortPositionRatio= 0.5f;

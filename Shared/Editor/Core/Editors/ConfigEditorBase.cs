@@ -154,7 +154,7 @@ namespace iCanScript.Internal.Editor {
             Rect pos= new Rect(x, y, versionSize.x, versionSize.y);
             GUI.Label(pos, versionContent);
             pos.y+= versionSize.y;
-            string buildDate= iCS_BuildInfo.kBuildDateStr;
+            string buildDate= BuildInfo.kBuildDateStr;
             GUIContent buildDateContent= new GUIContent(buildDate);
             Vector2 buildDateSize= GUI.skin.label.CalcSize(buildDateContent);        
             pos.x= column1Rect.x+0.5f*(column1Rect.width-buildDateSize.x);

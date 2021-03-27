@@ -88,7 +88,7 @@ namespace iCanScript.Internal.Editor {
     		// Build date
     		var rBuildDate= new Rect(column1X, rUserLicense.yMax, column2Width, labelHeight);
     		GUI.Label(rBuildDate, buildDateTitle);
-    		GUIContent buildDate= new GUIContent(iCS_BuildInfo.kBuildDateStr);
+    		GUIContent buildDate= new GUIContent(BuildInfo.kBuildDateStr);
     		rBuildDate.x= column2X; rBuildDate.width= column2Width;
     		GUI.Label(rBuildDate, buildDate);
 

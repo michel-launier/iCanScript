@@ -47,10 +47,10 @@ namespace iCanScript.Internal.Editor {
         }
         // ----------------------------------------------------------------------
         // Returns true if the distance to parent is less then twice the port size.
-        public bool IsNearParentEdge(iCS_EditorObject port, iCS_EdgeEnum edge= iCS_EdgeEnum.None) {
+        public bool IsNearParentEdge(iCS_EditorObject port, NodeEdge edge= NodeEdge.None) {
             var parent= port.ParentNode;
             var pos= port.GlobalPosition;
-            return parent.IsPositionOnEdge(pos, (edge != iCS_EdgeEnum.None ? edge : port.Edge));
+            return parent.IsPositionOnEdge(pos, (edge != NodeEdge.None ? edge : port.Edge));
         }
     
     }
