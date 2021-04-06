@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
+    @State var showLeftSidebar: Bool = true
+    @State var showRightSidebar: Bool = true
     @State var showHierarchy: Bool = true
     @State var showComponents: Bool = true
     @State var showLibraries: Bool = true
@@ -15,23 +17,28 @@ struct MainView: View {
 
     var body: some View {
         VStack {
+            
+            NavigationBarView()
 
             HStack {
                 // Left sidebar
-                VStack {
-                    if showComponents { ComponentsView() }
-                    if showHierarchy { HierarchyView() }
+                if showLeftSidebar {
+                    VStack {
+                        if showComponents { ComponentsView() }
+                        if showHierarchy { HierarchyView() }
+                    }
                 }
                 
                 // Main area
                 VStack {
-                    OptionsView()
                     EditorView()
                     if showLogs { LogsView() }
                 }
                 
                 // Right sidebar
-                if showLibraries { LibrariesView() }
+                if showRightSidebar {
+                    if showLibraries { LibrariesView() }
+                }
             }
         }
     }

@@ -23,6 +23,8 @@
 		9404912B261785380009AC82 /* LogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94049129261785380009AC82 /* LogsView.swift */; };
 		9404915126178AB30009AC82 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404915026178AB30009AC82 /* OptionsView.swift */; };
 		9404915226178AB30009AC82 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404915026178AB30009AC82 /* OptionsView.swift */; };
+		94049179261CC8840009AC82 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94049178261CC8840009AC82 /* NavigationBarView.swift */; };
+		9404917A261CC8840009AC82 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94049178261CC8840009AC82 /* NavigationBarView.swift */; };
 		946325D625F8C55A0058383B /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946325D525F8C55A0058383B /* Tests_iOS.swift */; };
 		946325E125F8C55A0058383B /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946325E025F8C55A0058383B /* Tests_macOS.swift */; };
 		946325E325F8C55A0058383B /* iCanScript.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 946325B725F8C5590058383B /* iCanScript.xcdatamodeld */; };
@@ -388,6 +390,7 @@
 		940491222617851D0009AC82 /* HierarchyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchyView.swift; sourceTree = "<group>"; };
 		94049129261785380009AC82 /* LogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsView.swift; sourceTree = "<group>"; };
 		9404915026178AB30009AC82 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		94049178261CC8840009AC82 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		946325B825F8C5590058383B /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		946325B925F8C5590058383B /* iCanScriptApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCanScriptApp.swift; sourceTree = "<group>"; };
 		946325BA25F8C5590058383B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -775,6 +778,7 @@
 				940491222617851D0009AC82 /* HierarchyView.swift */,
 				94049129261785380009AC82 /* LogsView.swift */,
 				9404915026178AB30009AC82 /* OptionsView.swift */,
+				94049178261CC8840009AC82 /* NavigationBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2095,6 +2099,7 @@
 				9404915126178AB30009AC82 /* OptionsView.swift in Sources */,
 				9404911C261784D90009AC82 /* LibrariesView.swift in Sources */,
 				940491232617851D0009AC82 /* HierarchyView.swift in Sources */,
+				94049179261CC8840009AC82 /* NavigationBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2113,6 +2118,7 @@
 				9404915226178AB30009AC82 /* OptionsView.swift in Sources */,
 				9404911D261784D90009AC82 /* LibrariesView.swift in Sources */,
 				940491242617851D0009AC82 /* HierarchyView.swift in Sources */,
+				9404917A261CC8840009AC82 /* NavigationBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
