@@ -15,21 +15,28 @@ struct MainView: View {
     @State private var showLibraries: Bool = true
     @State private var showLogs: Bool = true
 
+    // Layout attributes
+    private let toolbarPadding: CGFloat = 6
+    private let navigatorPadding: CGFloat = 1
+    
     var body: some View {
             HStack {
                 // Left sidebar
                 if showLeftSidebar {
                     VStack {
-                        LeftSidebarOptionsView()
+                        LeftToolbar().padding(toolbarPadding)
+                        LeftNavigators().padding(navigatorPadding)
                         if showComponents { ComponentsView() }
                         if showHierarchy { HierarchyView() }
+                        if showLibraries { LibrariesView() }
                         Spacer()
                     }
                 }
                     
                 // Main area
                 VStack {
-                    EditorOptionsView()
+                    EditorToolbar().padding(toolbarPadding)
+                    EditorNavigators().padding(navigatorPadding)
                     EditorView()
                     Spacer()
                     if showLogs { LogsView() }
@@ -38,8 +45,8 @@ struct MainView: View {
                 // Right sidebar
                 if showRightSidebar {
                     VStack {
-                        RightSidebarOptionsView()
-                        if showLibraries { LibrariesView() }
+                        RightToolbar().padding(toolbarPadding)
+                        RightNavigators().padding(navigatorPadding)
                         Spacer()
                     }
                 }

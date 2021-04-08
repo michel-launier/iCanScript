@@ -1,5 +1,5 @@
 //
-//  LeftSidebarOptionsView.swift
+//  LeftNavigators.swift
 //  iCanScript
 //
 //  Created by Michel Launier on 2021-04-06.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LeftSidebarOptionsView: View {
+struct LeftNavigators: View {
     var body: some View {
         HStack {
             Image(systemName: "folder")
@@ -16,8 +16,8 @@ struct LeftSidebarOptionsView: View {
     }
 }
 
-struct LeftSidebarOptionsView_Previews: PreviewProvider {
+struct LeftNavigators_Previews: PreviewProvider {
     static var previews: some View {
-        LeftSidebarOptionsView()
+        LeftNavigators()
     }
 }

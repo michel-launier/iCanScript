@@ -1,5 +1,5 @@
 //
-//  RightSidebarOptionsView.swift
+//  RightNavigators.swift
 //  iCanScript
 //
 //  Created by Michel Launier on 2021-04-06.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct RightSidebarOptionsView: View {
+struct RightNavigators: View {
     var body: some View {
         Spacer()
     }
 }
 
-struct RightSidebarOptionsView_Previews: PreviewProvider {
+struct RightNavigators_Previews: PreviewProvider {
     static var previews: some View {
-        RightSidebarOptionsView()
+        RightNavigators()
     }
 }

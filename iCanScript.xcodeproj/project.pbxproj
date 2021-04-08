@@ -21,12 +21,18 @@
 		940491242617851D0009AC82 /* HierarchyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940491222617851D0009AC82 /* HierarchyView.swift */; };
 		9404912A261785380009AC82 /* LogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94049129261785380009AC82 /* LogsView.swift */; };
 		9404912B261785380009AC82 /* LogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94049129261785380009AC82 /* LogsView.swift */; };
-		94049194261D2FD50009AC82 /* EditorOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94049193261D2FD50009AC82 /* EditorOptionsView.swift */; };
-		94049195261D2FD50009AC82 /* EditorOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94049193261D2FD50009AC82 /* EditorOptionsView.swift */; };
-		9404919B261D2FF70009AC82 /* LeftSidebarOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404919A261D2FF70009AC82 /* LeftSidebarOptionsView.swift */; };
-		9404919C261D2FF70009AC82 /* LeftSidebarOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404919A261D2FF70009AC82 /* LeftSidebarOptionsView.swift */; };
-		940491A2261D300B0009AC82 /* RightSidebarOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940491A1261D300B0009AC82 /* RightSidebarOptionsView.swift */; };
-		940491A3261D300B0009AC82 /* RightSidebarOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940491A1261D300B0009AC82 /* RightSidebarOptionsView.swift */; };
+		94049194261D2FD50009AC82 /* EditorNavigators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94049193261D2FD50009AC82 /* EditorNavigators.swift */; };
+		94049195261D2FD50009AC82 /* EditorNavigators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94049193261D2FD50009AC82 /* EditorNavigators.swift */; };
+		9404919B261D2FF70009AC82 /* LeftNavigators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404919A261D2FF70009AC82 /* LeftNavigators.swift */; };
+		9404919C261D2FF70009AC82 /* LeftNavigators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404919A261D2FF70009AC82 /* LeftNavigators.swift */; };
+		940491A2261D300B0009AC82 /* RightNavigators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940491A1261D300B0009AC82 /* RightNavigators.swift */; };
+		940491A3261D300B0009AC82 /* RightNavigators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940491A1261D300B0009AC82 /* RightNavigators.swift */; };
+		940491A9261E89810009AC82 /* EditorToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940491A8261E89810009AC82 /* EditorToolbar.swift */; };
+		940491AA261E89810009AC82 /* EditorToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940491A8261E89810009AC82 /* EditorToolbar.swift */; };
+		940491B0261E899B0009AC82 /* LeftToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940491AF261E899B0009AC82 /* LeftToolbar.swift */; };
+		940491B1261E899B0009AC82 /* LeftToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940491AF261E899B0009AC82 /* LeftToolbar.swift */; };
+		940491B7261E89AB0009AC82 /* RightToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940491B6261E89AB0009AC82 /* RightToolbar.swift */; };
+		940491B8261E89AB0009AC82 /* RightToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940491B6261E89AB0009AC82 /* RightToolbar.swift */; };
 		946325D625F8C55A0058383B /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946325D525F8C55A0058383B /* Tests_iOS.swift */; };
 		946325E125F8C55A0058383B /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946325E025F8C55A0058383B /* Tests_macOS.swift */; };
 		946325E325F8C55A0058383B /* iCanScript.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 946325B725F8C5590058383B /* iCanScript.xcdatamodeld */; };
@@ -391,9 +397,12 @@
 		9404911B261784D90009AC82 /* LibrariesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesView.swift; sourceTree = "<group>"; };
 		940491222617851D0009AC82 /* HierarchyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchyView.swift; sourceTree = "<group>"; };
 		94049129261785380009AC82 /* LogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsView.swift; sourceTree = "<group>"; };
-		94049193261D2FD50009AC82 /* EditorOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorOptionsView.swift; sourceTree = "<group>"; };
-		9404919A261D2FF70009AC82 /* LeftSidebarOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSidebarOptionsView.swift; sourceTree = "<group>"; };
-		940491A1261D300B0009AC82 /* RightSidebarOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSidebarOptionsView.swift; sourceTree = "<group>"; };
+		94049193261D2FD50009AC82 /* EditorNavigators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorNavigators.swift; sourceTree = "<group>"; };
+		9404919A261D2FF70009AC82 /* LeftNavigators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftNavigators.swift; sourceTree = "<group>"; };
+		940491A1261D300B0009AC82 /* RightNavigators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightNavigators.swift; sourceTree = "<group>"; };
+		940491A8261E89810009AC82 /* EditorToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorToolbar.swift; sourceTree = "<group>"; };
+		940491AF261E899B0009AC82 /* LeftToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftToolbar.swift; sourceTree = "<group>"; };
+		940491B6261E89AB0009AC82 /* RightToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightToolbar.swift; sourceTree = "<group>"; };
 		946325B825F8C5590058383B /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		946325B925F8C5590058383B /* iCanScriptApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCanScriptApp.swift; sourceTree = "<group>"; };
 		946325BA25F8C5590058383B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -780,9 +789,12 @@
 				9404911B261784D90009AC82 /* LibrariesView.swift */,
 				940491222617851D0009AC82 /* HierarchyView.swift */,
 				94049129261785380009AC82 /* LogsView.swift */,
-				94049193261D2FD50009AC82 /* EditorOptionsView.swift */,
-				9404919A261D2FF70009AC82 /* LeftSidebarOptionsView.swift */,
-				940491A1261D300B0009AC82 /* RightSidebarOptionsView.swift */,
+				94049193261D2FD50009AC82 /* EditorNavigators.swift */,
+				9404919A261D2FF70009AC82 /* LeftNavigators.swift */,
+				940491A1261D300B0009AC82 /* RightNavigators.swift */,
+				940491A8261E89810009AC82 /* EditorToolbar.swift */,
+				940491AF261E899B0009AC82 /* LeftToolbar.swift */,
+				940491B6261E89AB0009AC82 /* RightToolbar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2095,15 +2107,18 @@
 				9404910E261784A80009AC82 /* EditorView.swift in Sources */,
 				94049115261784CA0009AC82 /* ComponentsView.swift in Sources */,
 				94049107261784790009AC82 /* MainView.swift in Sources */,
-				940491A2261D300B0009AC82 /* RightSidebarOptionsView.swift in Sources */,
+				940491A2261D300B0009AC82 /* RightNavigators.swift in Sources */,
 				946325E325F8C55A0058383B /* iCanScript.xcdatamodeld in Sources */,
 				9404912A261785380009AC82 /* LogsView.swift in Sources */,
+				940491B0261E899B0009AC82 /* LeftToolbar.swift in Sources */,
+				940491A9261E89810009AC82 /* EditorToolbar.swift in Sources */,
 				940490FC261757F70009AC82 /* Node.swift in Sources */,
 				946325E525F8C55A0058383B /* iCanScriptApp.swift in Sources */,
-				9404919B261D2FF70009AC82 /* LeftSidebarOptionsView.swift in Sources */,
+				9404919B261D2FF70009AC82 /* LeftNavigators.swift in Sources */,
 				946325E725F8C55A0058383B /* ContentView.swift in Sources */,
 				9404911C261784D90009AC82 /* LibrariesView.swift in Sources */,
-				94049194261D2FD50009AC82 /* EditorOptionsView.swift in Sources */,
+				94049194261D2FD50009AC82 /* EditorNavigators.swift in Sources */,
+				940491B7261E89AB0009AC82 /* RightToolbar.swift in Sources */,
 				940491232617851D0009AC82 /* HierarchyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2115,15 +2130,18 @@
 				9404910F261784A80009AC82 /* EditorView.swift in Sources */,
 				94049116261784CA0009AC82 /* ComponentsView.swift in Sources */,
 				94049108261784790009AC82 /* MainView.swift in Sources */,
-				940491A3261D300B0009AC82 /* RightSidebarOptionsView.swift in Sources */,
+				940491A3261D300B0009AC82 /* RightNavigators.swift in Sources */,
 				946325E425F8C55A0058383B /* iCanScript.xcdatamodeld in Sources */,
 				9404912B261785380009AC82 /* LogsView.swift in Sources */,
+				940491B1261E899B0009AC82 /* LeftToolbar.swift in Sources */,
+				940491AA261E89810009AC82 /* EditorToolbar.swift in Sources */,
 				940490FD261757F70009AC82 /* Node.swift in Sources */,
 				946325E625F8C55A0058383B /* iCanScriptApp.swift in Sources */,
-				9404919C261D2FF70009AC82 /* LeftSidebarOptionsView.swift in Sources */,
+				9404919C261D2FF70009AC82 /* LeftNavigators.swift in Sources */,
 				946325E825F8C55A0058383B /* ContentView.swift in Sources */,
 				9404911D261784D90009AC82 /* LibrariesView.swift in Sources */,
-				94049195261D2FD50009AC82 /* EditorOptionsView.swift in Sources */,
+				94049195261D2FD50009AC82 /* EditorNavigators.swift in Sources */,
+				940491B8261E89AB0009AC82 /* RightToolbar.swift in Sources */,
 				940491242617851D0009AC82 /* HierarchyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
