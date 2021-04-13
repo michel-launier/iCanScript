@@ -11,6 +11,7 @@ struct LeftNavigators: View {
     var body: some View {
         HStack {
             Image(systemName: "folder")
+            Image(systemName: "square.stack.3d.down.right.fill")
             Spacer()
         }
     }

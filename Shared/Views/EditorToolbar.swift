@@ -13,6 +13,7 @@ struct EditorToolbar: View {
             Image(systemName: "sidebar.left").imageScale(.large)
             Image(systemName: "rectangle.dock").imageScale(.large)
             Spacer()
+            Image(systemName: "slider.horizontal.3").imageScale(.large)
             Image(systemName: "sidebar.right").imageScale(.large)
         }
     }

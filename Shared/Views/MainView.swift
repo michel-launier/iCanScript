@@ -30,7 +30,7 @@ struct MainView: View {
                         if showHierarchy { HierarchyView() }
                         if showLibraries { LibrariesView() }
                         Spacer()
-                    }
+                    }.frame(width: 200)
                 }
                     
                 // Main area
@@ -48,7 +48,7 @@ struct MainView: View {
                         RightToolbar().padding(toolbarPadding)
                         RightNavigators().padding(navigatorPadding)
                         Spacer()
-                    }
+                    }.frame(width: 200)
                 }
             }
 

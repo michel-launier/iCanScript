@@ -12,7 +12,6 @@ struct EditorNavigators: View {
         HStack {
             Spacer()
             Image(systemName: "hammer")
-            Image(systemName: "gear")
         }
     }
 }
